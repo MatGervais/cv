@@ -1,0 +1,382 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+{% block body %}
+
+{% if app.user %}
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Mathieu Gervais</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href=" {{path('profile')}} ">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a href=" {{logout_path('main')}} " class="btn btn-danger">Se déconnecter <img src="img/png/account-logout-2x-white.png" alt=""></a>
+    </form>
+  </div>
+</nav>
+</header>
+
+{% else %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a href=" {{path('login')}} " class="btn btn-success">Se connecter <img src="img/png/account-login-2x-white.png" alt=""></a>
+    </form>
+  </div>
+</nav>
+
+{% endif %}
+
+
+<section class="container home page" id="homepage-container">
+    <article class="section home-section my-3" id="hero">
+        <div class="intro">
+        <div class="row">
+            <div class="col-md-6 intro-left"><h1><span id="typed2"></span></h1></div>
+            <div class="col-md-6 intro-right">
+            <div class="row">
+                <div class="col-md-1"><img src="/img/png/envelope-closed-2x.png" alt=""></div>
+                <div class="col-md-11" ><h4 id="mail-top">matgervais96@gmail.com</h4></div>
+        </div>
+        <div class="row">
+                    <div class="col-md-1"><img src="/img/png/map-marker-2x.png" alt=""></div>
+                    <div class="col-md-11"><h2>Rennes</h2></div>
+                </div>
+                <div class="row">
+                <div class="col-md-1">
+                <img src="/img/png/magnifying-glass-2x-blue.png" alt=""></div>
+                <div class="col-md-11">
+                <h4>
+                    <span id="typed"></span>
+                </h4>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="wow fadeIn">
+            <img src="/img/jpg/photo.jpg" id="photo_profil">
+        </div>   
+    </article>
+    
+    <article class="section home-section my-5" id="me">
+        <h2 class="infos-article" id="me">À propos de moi</h3>
+        
+        <h2 class="my-3 font-italic about-title">“Moi... Mathieu”</h2>
+
+                <p class="presentation">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur voluptatem magnam similique inventore, quibusdam soluta officiis nam suscipit voluptate voluptas nobis facilis aut consequuntur dicta veniam facere nesciunt reiciendis temporibus quisquam aliquid at officia vel porro consequatur! Id deleniti ad tempore? Repudiandae consectetur, aliquam itaque rem error cum facilis animi.</p>
+        
+        <h2 class="my-3 font-italic about-title">“Donnez, donnez-moi”</h2>
+        
+                <p class="presentation">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur voluptatem magnam similique inventore, quibusdam soluta officiis nam suscipit voluptate voluptas nobis facilis aut consequuntur dicta veniam facere nesciunt reic</p>
+        
+        <h2 class="my-3 font-italic about-title">“Je vous le rendrai”</h2>
+        
+                <p class="presentation">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur voluptatem magnam similique inventore, quibusdam soluta officiis nam suscipit voluptate voluptas nobis facilis aut consequuntur dicta veniam facere nesciunt reic</p>
+    </article>
+
+    <article class="section home-section my-3" id="parcours">
+        <h2 class="infos-article" id="parcours_title">Mon parcours scolaire</h2>
+        <div class="timeline">
+            <section class="timeline-item">
+                    <a href="#" class="timeline-item-details">
+                        <time datetime="2018" class="timeline-item-details-date">Sept 2018</time>
+                        <div class="timeline-item-details-marker"></div>
+                        <div class="timeline-item-details-description wow slideInLeft" data-wow-offset="200">
+                        <h2>Digital Campus</h2>
+                        <div class="row">
+                        
+                        <div class="col-md-1"><img src="/img/png/map-marker-2x.png" alt=""></div>
+                        <div class="col-md-11"><h3 class="date">Rennes (35)</h3></div>
+                        
+                        </div>
+                        
+                        <ul class="list my-2">
+                            <li class="list-item">&#8680; Développement web (HTML, CSS, PHP, SQL, JS)</li>
+                            <li class="list-item">&#8680; Frameworks (Symfony 4, Node.js) </li>
+                            <li class="list-item">&#8680; Projet de mise en pratique avec Symfony</li>
+                        </ul>
+                        </div>
+                    </a>
+                </section>
+                <section class="timeline-item">
+                    <a href="#" class="timeline-item-details">
+                        <time datetime="2018" class="timeline-item-details-date-right">Sept 2017</time>
+                        <div class="timeline-item-details-marker-right"></div>
+                        <div class="timeline-item-details-description-right wow slideInRight" data-wow-offset="200">
+                        <h2>Digital Campus</h2>
+                        <div class="row">
+                        
+                        <div class="col-md-1"><img src="/img/png/map-marker-2x.png" alt=""></div>
+                        <div class="col-md-11"><h3 class="date">Rennes (35)</h3></div>
+                        
+                        </div>
+                        
+                        <ul class="list my-2">
+                            <li class="list-item">&#8680; Développement web (HTML, CSS, PHP, SQL)</li>
+                            <li class="list-item">&#8680; Design graphique (Photoshop, Illustrator)</li>
+                            <li class="list-item">&#8680; Audiovisuel(Premiere Pro, After Effects)</li>
+                        </ul>
+                        </div>
+                    </a>
+                </section>
+                <section class="timeline-item">
+                    <a href="#" class="timeline-item-details">
+                        <time datetime="2018" class="timeline-item-details-date">2015-2017</time>
+                        <div class="timeline-item-details-marker"></div>
+                        <div class="timeline-item-details-description wow slideInLeft" data-wow-offset="200">
+                        <h2>BTS SNIR</h2>
+                        <div class="row">
+                        
+                        <div class="col-md-1"><img src="/img/png/map-marker-2x.png" alt=""></div>
+                        <div class="col-md-11"><h3 class="date">St-Malo (35)</h3></div>
+                        
+                        </div>
+
+                        <ul class="list my-2">
+                            <li class="list-item">&#8680; Développement web via CMS (WordPress)</li>
+                            <li class="list-item">&#8680; Programmation en C++</li>
+                            <li class="list-item">&#8680; Développement Javascript</li>
+                            <li class="list-item">&#8680; Programmation Raspberry Pi 2</li>
+                        </ul>
+                        </div>
+                    </a>
+                </section>
+                <section class="timeline-item"><a href="#" class="timeline-item-details">
+                    <time datetime="2018" class="timeline-item-details-date-right">2013-2015</time>
+                    <div class="timeline-item-details-marker-right"></div>
+                    <div class="timeline-item-details-description-right wow slideInRight" data-wow-offset="200">
+                        <h2>BAC STI2D</h2>
+                        <div class="row">
+                        
+                        <div class="col-md-1"><img src="/img/png/map-marker-2x.png" alt=""></div>
+                        <div class="col-md-11"><h3 class="date">St-Malo (35)</h3></div>
+                        
+                        </div>
+
+                        <ul class="list my-2">
+                            <li class="list-item">&#8680; Programmation Arduino</li>
+                            <li class="list-item">&#8680; Développement d'un casque de réalité augmentée</li>
+                            <li class="list-item">&#8680; Bases HTML&CSS</li>
+                            
+                        </ul>
+                    </div>
+                </a>
+            </section>
+        </div>
+    </article>
+
+    <article class="section home-section my-3" id="experience">
+        <h2 class="infos-article" id="experience_title">Mes expériences dans le web</h2>
+
+        <div class="row my-5" id="breizhtorm">
+            <div class="text-center col-md-6 wow fadeInLeft" data-wow-offset="200"><img src="/img/png/breizhtorm.png" alt="Logo de Breizhtorm"></div>
+            <div class="col-md-6 wow fadeInRight" data-wow-offset="200">
+            <h1 class="text-center">Breizhtorm</h1>
+            <div class="row text-center">
+            <div class="col-md-6"><img src="/img/png/map-marker-2x.png" alt=""><h4 class="date">Rennes(35)</h4></div>
+            <div class="col-md-6"><img src="/img/png/clock-2x.png" alt=""><h4 class="date">Juin 2014 (1 mois)</h4></div>
+            </div>
+            <hr class="separateur">
+
+                <p class="intro-corp">Breizhtorm est une agence de communication de la région rennaise spécialisée dans la création d’identité. Ils conçoivent logos, plaquettes, cartes de visite, publicités, brochures et flyers, et proposent des solutions de mises en page automatisée pour la réalisation de catalogues ou de brochures. Leur pôle digital conçoit également des sites internet, des applications mobiles ainsi que des animations et de la video.</p>
+                <ul class="list">
+                    <li class="list-item">&#8680; Initiation aux CMS. En développant un blog personnel à l'aide de Wordpress en local.</li>
+                    <li class="list-item">&#8680; Programmation Arduino. Afficher sur un petit écran LCD, des informations en relation avec leurs réseaux sociaux.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="separateur-exp wow fadeInUpBig" data-wow-offset="100">
+
+        <div class="row my-5" id="chevignon">
+            <div class=" col-md-6 wow fadeInLeft" data-wow-offset="200">
+                <h1 class="text-center">Chevignon</h1>
+            <div class="row text-center">
+                <div class="col-md-6"><img src="/img/png/map-marker-2x.png" alt=""><h4 class="date">Saint-Denis (93)</h4></div>
+                <div class="col-md-6"><img src="/img/png/clock-2x.png" alt=""><h4 class="date">Mai 2016 (2 mois)</h4></div>
+            </div>
+
+            <hr class="separateur">
+
+                <p class="intro-corp">Les Établissements Charles Chevignon, exploitant la marque Chevignon, sont une entreprise de prêt-à-porter française fondée en 1979 par Charles Chevignon et Guy Azoulay.</p>
+                <ul class="list">
+                    <li class="list-item">&#8680; Développement PHP. Développement d'une application web interne en PHP pour la gestion du temps de travail à destination du service RH</li>
+                </ul>
+            </div>
+
+            <div class="text-center col-md-6 wow fadeInRight" data-wow-offset="200"><img src="/img/png/chevignon.png" alt="Logo de Chevignon"></div>
+
+        </div>
+
+        <hr class="separateur-exp wow fadeInUpBig" data-wow-offset="100">
+
+        <div class="row my-5" id="trophee">
+            <div class="text-center col-md-6 wow fadeInLeft" data-wow-offset="200"><img src="/img/png/trophee.png" alt="Logo de la GFI"></div>
+            <div class=" col-md-6 wow fadeInRight" data-wow-offset="200">
+                <h1 class="text-center">Trophée des projets industriels</h1>
+            <div class="row text-center">
+                <div class="col-md-6"><img src="/img/png/map-marker-2x.png" alt=""><h4 class="date">Lorient (56)</h4></div>
+                <div class="col-md-6"><img src="/img/png/clock-2x.png" alt=""><h4 class="date">Novembre 2017 (6 mois)</h4></div>
+            </div>
+            <hr class="separateur">
+                <p class="intro-corp">Les Trophées des projets industriels permettent de développer les collaborations entre des groupes de jeunes (du Bac Pro à l'école d'ingénieur de Bretagne), les écoles qui les forment et des entreprises bretonnes. Chaque projet présenté répond au besoin réel d'une entreprise industrielle qui s'appuie sur les compétences d'un établissement d'enseignement technique et professionnel pour l'accompagner dans cette réalisation.</p>
+                <ul class="list">
+                    <li class="list-item">&#8680;Création d'un site web de visualisation d'objets géolocalisés, en utilisant les technologies LoraWan et SigFox</li>
+                    <li class="list-item">&#8680; Prix : "Trophée de la valorisation des métiers" pour ce projet réalisé en durant 6 mois en BTS</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <article class="section home-section my-3" id="langues">
+        <h2 class="infos-article my-3" id="langues_title">Langues parlées</h2>
+        <h3>Français</h3>
+        <div class="progress my-3">
+            <div class="progress-bar" data-toggle="tooltip" data-placement="top" title="Langue native" role="progressbar" id="français" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
+        <h3>Anglais</h3>
+        <div class="progress my-3">
+            <div class="progress-bar" data-toggle="tooltip" data-placement="top" title="Compétences professionnelles" role="progressbar" id="anglais" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+        </div>
+        <h3>Espagnol</h3>
+        <div class="progress my-3">
+            <div class="progress-bar" data-toggle="tooltip" data-placement="top" title="Compétences professionnelles" role="progressbar" id="espagnol" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+        </div>
+        <h3>Russe</h3>
+        <div class="progress my-3">
+            <div class="progress-bar" data-toggle="tooltip" data-placement="top" title="Notions de bases" role="progressbar" id="russe" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
+        </div>
+    </article>
+
+    <article class="section home-section my-5" id="hobbies">
+        <h2 class="infos-article" id="hobbies">Mes loisirs</h2>
+                <div class="row my-5">
+                    <div class="col-md-3 text-center" id="voyages">
+                        <img src="/img/png/plane.png" class=" icon-hobbies wow jackInTheBox" data-wow-offset="200" alt="Illustration d'un avion">
+
+                        <h2 class="my-3 text-center">Les voyages</h2>
+
+                        <hr class="separateur">
+
+                        <div class="description-hobby wow slideInLeft" data-wow-offset="200">
+                            <h3 class="font-italic">“Voyage voyage”</h3>
+                            <p>Depuis tout petit, il ne se passe pas une année sans que je ne voyage pas. Les États-Unis, le Mexique, l'Angleterre, la République Tchèque en passant par l'Allemagne sans oublier la merveilleuse Espagne.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 text-center" id="musique">
+                        <img src="/img/png/music.png" class="icon-hobbies wow jackInTheBox" data-wow-offset="200" alt="Illustration d'une note de musique">
+
+                        <h2 class="my-3 text-center">La musique</h2>
+
+                        <hr class="separateur">
+
+                        <div class="description-hobby wow slideInUp" data-wow-offset="200">
+                            <h3 class="font-italic">“Quand la musique est bonne”</h3>
+                            <p>Impossible de me séparer de ma musique. Que ce soit pour me détendre, me doucher, me déplacer ou bien développer, la musique trouve toujours chemin à mes oreilles.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 text-center" id="sport">
+                        <img src="/img/png/cup.png" class="icon-hobbies wow jackInTheBox" data-wow-offset="200" alt="Illustration du sport en général via un trophée">
+                        
+                        <h2 class="my-3 text-center">Le sport</h2>
+
+                        <hr class="separateur">
+
+                        <div class="description-hobby wow slideInUp" data-wow-offset="200">
+                            <h3 class="font-italic">“Cours Forrest ! Cours !”</h3>
+                            <p>Je pratique le roller et le Foot Flag. Le sport est pour moi une carte essentielle dans le chateau de carte que je monte depuis longtemps. Il m'aide à me dépenser, m'ouvrir au monde et faire des rencontres.</p>
+                        </div>
+
+                        <p></p>
+                    </div>
+                    <div class="col-md-3 text-center" id="jeux-videos">
+                        <img src="/img/png/controller.png" class="icon-hobbies wow jackInTheBox" data-wow-offset="200" alt="Illustration d'une manette de jeux-vidéo">
+
+                        <h2 class="my-3 text-center">Les Jeux-vidéos</h2>
+
+                        <hr class="separateur">
+
+                        <div class="description-hobby wow slideInRight" data-wow-offset="200">
+                            <h3>“Je finis cette mission et j'arrive !”</h3>
+                            <p>Eh oui ! Comme beaucoup de ma génération, je n'ai pas échappé à ce petit passe-temps, qui est vite devenu passion pour moi. Un monde d'une dimension irréelle qui m'inspire dans mon travail de tous les jours.</p>
+                        </div>
+
+                    </div>
+                </div>
+    </article>
+
+    <article class="section home-section" id="contact">
+        <header class="home-section-header my-5">
+            <h2 class="infos-article">N'hésitez pas à me contacter</h2>
+        </header>
+        <section class="row my-5  text-center">
+            <div class="col-md-6 wow shake" data-wow-duration="0.75s" data-wow-offset="50" >Par téléphone
+            <h3 class="infos">06.65.91.16.97</h3>
+            </div>
+            <div class="col-md-6  wow heartBeat" data-wow-duration="2s" data-wow-offset="100">Par mail
+            <h3 class="infos"><a href="mailto:matgervais96@gmail.com">matgervais96@gmail.com</a></h3>
+            </div>
+
+        </section>
+    </article>
+</div>
+
+
+
+   
+  <script>
+            $('document').ready(function(){
+                var typed = new Typed('#typed',{
+                    strings: ['Développeur Web','Recherche CDI','En Bretagne',"Dès aujourd'hui"],
+                    typeSpeed: 100,
+                    backSpeed:50,
+                    loop:true 
+                });
+
+                var typed2 = new Typed('#typed2', {
+                    strings: ['Permis AB', '18 Septembre 1996', 'Mathieu Gervais'],
+                    typeSpeed: 100,
+                    showCursor:false,
+                    backSpeed: 0,
+                    fadeOut: true,
+                    loop: false
+                });
+            });
+
+
+
+            
+        </script>
+{% endblock %}
