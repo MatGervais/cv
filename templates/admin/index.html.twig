@@ -17,9 +17,32 @@
 
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href=" {{path('admin_content')}} ">Mon en-tête</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Ma bio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mon parcours</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mes expériences</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mes compétences informatiques</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mes langues</a>
+      </li>
     </ul>
     
     <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="btn btn-info" href="#">Modifier apparence</a>
+        </li>
+      </ul>
       <a href="{{ logout_path('main') }}" class="btn btn-danger">Se déconnecter <img src="img/png/account-logout-2x-white.png" alt=""></a>
     </form>
   </div>
