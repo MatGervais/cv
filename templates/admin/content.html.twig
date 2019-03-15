@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin panel{% endblock %}
+
+{% block body %}
+
+{% if app.user %}
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{path('homepage')}}"><img src="/img/png/arrow-thick-left-3x-white.png" style="margin-top:-5px;" alt=""> Retourner à mon CV</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href=" {{path('admin_content')}} ">Mon en-tête</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Ma bio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mon parcours</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mes expériences</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mes compétences informatiques</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mes langues</a>
+      </li>
+    </ul>
+    
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="btn btn-info" href=" {{path('admin_appearance')}} ">Modifier apparence</a>
+        </li>
+      </ul>
+      <a href="{{ logout_path('main') }}" class="btn btn-danger">Se déconnecter <img src="img/png/account-logout-2x-white.png" alt=""></a>
+    </form>
+  </div>
+</nav>
+
+
+<div class="container">
+
+    <h1 class="text-center infos-article">Modification du contenu de votre CV</h1>
+
+    <hr class="separateur-exp">
+
+    <form action="#" method="POST">
+        <section class="presentation">
+
+            <h2>En-tête</h2>
+
+            <div class="form-group">
+                <label for="photoDeProfil">Choisir ma photo de profil</label>
+                <input type="file" class="form-control-file" id="photoDeProfil" aria-describedby="fileHelp">
+            </div>
+    
+        </section>
+    </form>
+
+</div>
+
+
+{% endif %}
+
+{% endblock %}
