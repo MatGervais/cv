@@ -2,8 +2,9 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Heading;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminController extends AbstractController
 {
@@ -12,7 +13,10 @@ class AdminController extends AbstractController
      */
     public function content()
     {
-        return $this->render('admin/content.html.twig');
+
+        $heading = $this->getDoctrine()->getRepository(Heading::class)->findAll();
+
+        return $this->render('admin/content.html.twig', ['headings'=> $heading]);
     }
     
     /**
