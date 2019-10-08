@@ -334,11 +334,11 @@ font-family: 'Raleway', sans-serif;
 #bar #symfony div.bottom { z-index:990; background-color:#340e43; width:480px;height:40px;
 	background:-moz-linear-gradient(-90deg, #340e43, #1a0721); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#5a5a5a), to(#333333)); }
   
-/* Bootstrap */
-#bootstrap div.top { z-index:91; }
-#bootstrap div.bottom { z-index:90; height:120px; }
-#bootstrap:hover div.top { z-index:991; background-color:#3f1150; margin-left:130px; }
-#bar #bootstrap div.bottom { z-index:990; background-color:#340e43; width:450px;height:40px;
+/* Laravel */
+#laravel div.top { z-index:91; }
+#laravel div.bottom { z-index:90; height:120px; }
+#laravel:hover div.top { z-index:991; background-color:#3f1150; margin-left:130px; }
+#bar #laravel div.bottom { z-index:990; background-color:#340e43; width:360px;height:40px;
   background:-moz-linear-gradient(-90deg, #340e43, #1a0721); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#602c50), to(#2e0e24)); }
 
   /* BDD */
